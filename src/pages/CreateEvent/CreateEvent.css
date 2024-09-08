@@ -1,0 +1,26 @@
+.CreateEvent {
+  margin-bottom: 2rem;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.CreateEvent-form{
+  padding: 1rem;
+  width: 325px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: whitesmoke;
+}
+
+.CreateEvent-form input{
+  width: 80%;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  text-align: center;
+}
+#error {
+  color: brown;
+}
