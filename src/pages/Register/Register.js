@@ -60,7 +60,7 @@ const Register = (parent) => {
 const submitRegister = async (name, email, password, form) => {
 
 
-  const res = await fetch(process.env.APP_BACKEND_URL + "/api/auth/register", {
+  const res = await fetch(import.meta.env.VITE_APP_BACKEND_URL + "/api/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

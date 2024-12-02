@@ -36,7 +36,7 @@ export const EventPage = async (event) => {
       eventContainer.append(deleteButton);
 
       deleteButton.addEventListener("click", async () => {
-        const deleteRes = await fetch(process.env.APP_BACKEND_URL + "/api/events/" + event._id, {
+        const deleteRes = await fetch(import.meta.env.VITE_APP_BACKEND_URL + "/api/events/" + event._id, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ export const EventPage = async (event) => {
     eventContainer.append(extraInfoContainer);
 
     attendeesButton.addEventListener("click", async () => {
-      const attendeesRes = await fetch(process.env.APP_BACKEND_URL + "/api/attendees/" + event._id, {
+      const attendeesRes = await fetch(import.meta.env.VITE_APP_BACKEND_URL + "/api/attendees/" + event._id, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json"
@@ -92,7 +92,7 @@ export const EventPage = async (event) => {
       extraInfoContainer.innerHTML = "";
       let pContent;
       try {
-        const res = await fetch(process.env.APP_BACKEND_URL + "/api/user/attendees/" + event._id, {
+        const res = await fetch(import.meta.env.VITE_APP_BACKEND_URL + "/api/user/attendees/" + event._id, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
