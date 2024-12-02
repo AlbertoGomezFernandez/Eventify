@@ -65,6 +65,7 @@ export const submitLogin = async (name, password, form) => {
   if (res.status === 400) {
     const errorMessage = document.querySelector("p");
     errorMessage.textContent = "Invalid credentials";
+    form.append(errorMessage);
     form.reset();
     return;
   }
