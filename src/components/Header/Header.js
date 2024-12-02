@@ -18,7 +18,7 @@ export const Header = () => {
       function: CreateEventPage
     },
     {
-      text: `${user.name} / Logout`,
+      text: `${user.name || user.user.name} / Logout`,
       function: () => {
         localStorage.removeItem("token");
         window.location.reload();
