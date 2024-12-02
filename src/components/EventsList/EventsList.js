@@ -9,7 +9,7 @@ export const EventsList = async () => {
   eventsContainer.className = "flex container";
   main.append(eventsContainer);
 
-  const res = await fetch("http://localhost:3000/api/events");
+  const res = await fetch(process.env.APP_BACKEND_URL + "/api/events");
 
   const events = await res.json();
 

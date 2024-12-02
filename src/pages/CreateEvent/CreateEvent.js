@@ -87,7 +87,7 @@ const submitEvent = async (img, name, date, location, description, form) => {
   formData.append("location", location);
   formData.append("description", description);
   formData.append("userId", user._id);
-  const res = await fetch("http://localhost:3000/api/user/events", {
+  const res = await fetch(process.env.APP_BACKEND_URL + "/api/user/events", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
